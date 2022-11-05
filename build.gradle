@@ -15,6 +15,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	// mysql 연동
 	runtimeOnly 'com.mysql:mysql-connector-j'
@@ -37,6 +38,8 @@ dependencies {
 
 	// Querydsl
 	implementation 'com.querydsl:querydsl-jpa'
+
+	implementation 'javax.servlet:jstl'
 }
 
 tasks.named('test') {
