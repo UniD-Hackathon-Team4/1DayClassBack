@@ -33,33 +33,33 @@ public class Party extends BaseTime {
     private LocalDateTime updated_at;
      */
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)    // enum의 이름으로 지정
     private Type type;
 
-    @Column
+    @Column(nullable = false)
     private int number_of_people;
 
-    @Column
+    @Column(nullable = false)
     private LocalDateTime start_date;
 
     @Column
     private LocalDateTime end_date;
 
-    @Column
+    @Column(nullable = false)
     private int cost;
 
-    @Column
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)    // enum의 이름으로 지정
     private Ott ott;
 
-    @Column
+    @Column(nullable = false)
     private boolean is_completed;
 
-    @Column
+    @Column(nullable = false)
     private String title;
 
-    @Column
+    @Column(nullable = false)
     private String contents;
 
 }

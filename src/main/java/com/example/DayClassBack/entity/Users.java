@@ -26,13 +26,13 @@ public class Users extends BaseTime implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
-    @Column
+    @Column(nullable = false)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String password;
 
-    @Column
+    @Column(nullable = false)
     private String username;
 
     // @CreationTimestamp
@@ -41,7 +41,7 @@ public class Users extends BaseTime implements UserDetails {
     // @UpdateTimestamp
     // private Timestamp  modified_date;
 
-    @Column
+    @Column(nullable = false)
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
