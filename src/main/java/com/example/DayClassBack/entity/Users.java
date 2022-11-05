@@ -24,7 +24,8 @@ public class Users extends BaseTime implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idx;
+    @Column(name="user_id")
+    private Long id;
 
     @Column(nullable = false)
     private String email;

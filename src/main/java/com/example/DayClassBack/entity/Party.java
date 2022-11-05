@@ -18,6 +18,7 @@ public class Party extends BaseTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="party_id")
     private Long id;
 
     @ManyToOne                  // Many = Party, Users = One 한명의 유저는 여러개의 게시글을 쓸 수 있다.
