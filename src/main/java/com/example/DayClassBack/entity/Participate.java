@@ -24,7 +24,7 @@ public class Participate extends BaseTime {
 
     @ManyToOne (targetEntity =Party.class)   // (mappedBy ="Party", cascade=CascadeType.ALL, orphanRemoval=true)                   // Many = Participate, Users = Party
     @JoinColumn(name="party_id")             // foreign key (partyId) references Party (id)
-    private List<Party> party;
+    private Party party;
 
     @Column(nullable=false)
     private boolean is_selected;

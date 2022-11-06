@@ -1,12 +1,14 @@
 package com.example.DayClassBack.entity;
 
 import com.example.DayClassBack.enums.Ott;
-import com.example.DayClassBack.enums.Type;
+import com.example.DayClassBack.enums.WriteType;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import javax.validation.constraints.NotNull;
 
 @Builder
 @NoArgsConstructor
@@ -34,19 +36,23 @@ public class Party extends BaseTime {
     private LocalDateTime updated_at;
      */
 
-    @Column(nullable = false)
+    @Column
     @Enumerated(EnumType.STRING)    // enum의 이름으로 지정
-    private Type type;
+    private WriteType writeType;
 
-    @Column(nullable = false)
+    @NotNull
+    @Column
     private int number_of_people;
 
-    @Column(nullable = false)
-    private LocalDateTime start_date;
+    @Column
+    @DateTimeFormat(pattern = "yyyy.MM.dd")
+    private LocalDate start_date;
 
     @Column
-    private LocalDateTime end_date;
+    @DateTimeFormat(pattern = "yyyy.MM.dd")
+    private LocalDate end_date;
 
+    @NotNull
     @Column(nullable = false)
     private int cost;
 
@@ -60,7 +66,7 @@ public class Party extends BaseTime {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
-    private String contents;
+    // @Column(nullable = false)
+    // private String contents;
 
 }
