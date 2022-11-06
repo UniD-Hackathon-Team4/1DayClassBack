@@ -1,6 +1,6 @@
 package com.example.DayClassBack.dto.response;
 
-import com.example.DayClassBack.enums.Type;
+import com.example.DayClassBack.enums.WriteType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +17,7 @@ public class PartyResponseDto {
         private String title;
         private String content;
 
-        private Type type;
+        private WriteType type;
 
         private String refreshToken;
         private Long refreshTokenExpirationTime;

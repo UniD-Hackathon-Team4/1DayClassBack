@@ -36,6 +36,9 @@ public class Users extends BaseTime implements UserDetails {
     @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
+    private String contact;
+
     // @CreationTimestamp
     // private Timestamp create_date;
 
